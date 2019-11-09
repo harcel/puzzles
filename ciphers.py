@@ -107,3 +107,40 @@ def bifid_encrypt(key, plaintext):
     
     return cyphertext
 
+
+
+def substitution(plaintext, key):
+    # Create substitution list
+    subst = ''
+    for ll in key:
+        if (ll in string.ascii_lowercase) and (ll not in subst): subst += ll
+    for lc in string.ascii_lowercase:
+        if lc not in subst: subst += lc
+    assert len(subst) == 26
+    
+    # Replace every lowercase letter by the corresponding substitution
+    ciph = ''
+    for ll in plaintext:
+        if ll in string.ascii_lowercase:
+            ind =  (string.ascii_lowercase).index(ll)
+            ciph += subst[ind]
+        else: ciph += ll
+    
+    return ciph
+    
+
+
+
+
+
+
+
+##################
+
+def test_caeser():
+    text = "there's the monkey!"
+    n = 12
+    ciph = caesar(text, n)
+    assert caesar(ciph, 26-n) == text
+
+    

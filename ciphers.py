@@ -128,7 +128,24 @@ def substitution(plaintext, key):
     
     return ciph
     
+def reverse_subst(ciphertext, key):
+    # Create substitution list
+    subst = ''
+    for ll in key:
+        if (ll in string.ascii_lowercase) and (ll not in subst): subst += ll
+    for lc in string.ascii_lowercase:
+        if lc not in subst: subst += lc
+    assert len(subst) == 26
+    
+    # Replace every lowercase letter by the corresponding substitution
+    plaintext = ''
+    for ll in ciphertext:
+        if ll in string.ascii_lowercase:
+            ind =  (subst).index(ll)
+            plaintext += (string.ascii_lowercase)[ind]
+        else: plaintext += ll
 
+    return plaintext
 
 
 

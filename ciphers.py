@@ -149,6 +149,18 @@ def reverse_subst(ciphertext, key):
 
 
 
+##########################
+
+def subs(text, subst):
+    """Based on substitution dict, replace letters in text by their subst
+    First converts to lower case. Every non-letter is left intact"""
+    
+    text = text.lower()
+    
+    return ''.join([subst[l] if l in subst else l for l in text])
+    
+
+
 
 
 

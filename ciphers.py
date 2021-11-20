@@ -14,6 +14,16 @@ def caesar(text, shift):
             new += lc[(lc.index(t) + len(lc) + shift) % len(lc)] # "+len(lc)" to accomodat negative shifts
         else: new += t
     return new
+
+def caesar_with_numbers(text, shift):
+    lc = string.ascii_lowercase + "0123456789"
+    new = ''
+    for t in text:
+        if t in lc:
+            new += lc[(lc.index(t) + len(lc) + shift) % len(lc)] # "+len(lc)" to accomodate negative shifts
+        else: new += t
+    return new
+  
     
     
 def alt_caesar(text, seq):

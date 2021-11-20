@@ -1,0 +1,57 @@
+only "in total", in binary (http://www.unit-conversion.info/texttools/convert-text-to-binary/):
+01101001 01101110 00100000 01110100 01101111 01110100 01100001 01101100 
+
+Just the counts, they always start with zero:
+121121 12131 215 13112 1214 13112 1241 12122
+
+In total, in this encoding, would be 
+121121   12131   215  13112   1214  13112   1241   12122   
+in groups:
+12-11-21 12-13-1 21-5 13-11-2 12-14 13-1-12 1-24-1 12-1-22 
+letters at those positions:
+lku       lma     ue   mkb     ln    mal    axa     lav
+
+
+MUCH OF THE ENCRYPTION BELOW is done in Crypto.ipynb in ~/nerd/puzzles
+
+Add the sentence "to find out how many layers there will be" to the start, and viginere with key "pincers" to find, without spaces:
+
+tofindouthowmanylayerstherewillbelkulmauemkblnmalaxalav
+
+becomes:
+iwskrugjbuqadscgyccvjhbugvvoxtydiccjtzcyvezjypqrdpfnnem
+
+
+Putting back the spaces:
+
+to find out how many layers there will be lku lma ue mkb ln mal axa lav
+iw skru gjb uqa dscg yccvjh bugvv oxty di ccj tzc yv ezj yp qrd pfn nem
+
+
+Then, add "you will need to use pincers" to the start of that:
+
+you will need to use pincers iw skru gjb uqa dscg yccvjh bugvv oxty di ccj tzc yv ezj yp qrd pfn nem
+
+And encrypt that whole thing with an alternativel +4, -5, +3 rotation (a la Caesar) to find  (4, 5, 3 are word lengths of the first bit)
+cjx rlpg rzhh ws xwz tdqgzuw la vomx bmf xuv hnfk bgxync fpjzq sswc gm fge xuf ty zcn bt tvy taq ihq
+
+
+And the fisrt step will eb a very simple, 1 shift Caesar, to make sure people get the gist, after adding "Good start, but" to the start.
+
+good start, but cjx rlpg rzhh ws xwz tdqgzuw la vomx bmf xuv hnfk bgxync fpjzq sswc gm fge xuf ty zcn bt tvy taq ihq
+
+becomes
+hppe tubsu, cvu dky smqh saii xt yxa uerhavx mb wpny cng yvw iogl chyzod gqkar ttxd hn ghf yvg uz ado cu uwz ubr jir
+
+Adding back the upper case start and a exclamation at the end:
+Hppe tubsu, cvu dky smqh saii xt yxa uerhavx mb wpny cng yvw iogl chyzod gqkar ttxd hn ghf yvg uz ado cu uwz ubr jir!
+
+
+to have a puzzle solving to 
+Good start, but you will need to use pincers to find out how many layers there will be in total!
+With answer 4.
+
+
+
+
+

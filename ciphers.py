@@ -43,6 +43,7 @@ def alt_caesar(text, seq):
     return new
     
 def vigenere_encrypt(plaintext, key):
+    lc = string.ascii_lowercase
     key_length = len(key)
     key_as_int = [lc.index(i) for i in key]
     print(key_as_int)
@@ -56,6 +57,7 @@ def vigenere_encrypt(plaintext, key):
 
 
 def vigenere_decrypt(ciphertext, key):
+    lc = string.ascii_lowercase
     key_length = len(key)
     key_as_int = [lc.index(i) for i in key]
     ciphertext_int = [lc.index(i) for i in ciphertext]
